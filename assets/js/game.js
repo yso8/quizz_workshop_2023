@@ -56,6 +56,10 @@ getNewQuestion = () => {
         const number = choice.dataset['number'];
         choice.innerText = currentQuestion['choice' + number];
     });
+    
+    choices.forEach((choice) => {
+        choice.parentElement.classList.remove('correct');
+    });
 
     availableQuesions.splice(questionIndex, 1);
     acceptingAnswers = true;
