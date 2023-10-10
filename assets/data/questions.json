@@ -1,12 +1,102 @@
 [
     {
         "question" : "Pouvez-vous définir ce qu'est le harcèlement sexuel au travail selon votre compréhension personnelle ?",
+        "choice1" : "C'est une blague ou un compliment sur l'apparence d'une personne.",
+        "choice2" : "C'est une conduite inappropriée de nature sexuelle qui crée un environnement de travail hostile.",
+        "choice3" : "C'est une promotion ou un avancement professionnel en échange de faveurs sexuelles.",
+        "choice4" : "C'est une conversation amicale entre collègues.",
+        "answer" : 2,
+        "explication" : "La réponse 2 est la plus précise car elle capture l'essence du harcèlement sexuel en décrivant son impact sur l'environnement de travail."
+    },
+    {
+        "question" : "Connaissez-vous les différentes formes de harcèlement sexuel au travail ? Pouvez-vous en donner des exemples ?",
+        "choice1" : "Compliments, blagues, et discussions sur des sujets non-sexuels.",
+        "choice2" : "Avances sexuelles non désirées, demandes de faveurs sexuelles, et autres comportements sexuels verbaux ou physiques.",
+        "choice3" : "Évaluation du rendement professionnel uniquement.",
+        "choice4" : "Les discussions sur les préférences politiques.",
+        "answer" : 2,
+        "explication" : "La réponse 2 est correcte car elle énumère des exemples spécifiques de harcèlement sexuel au travail."
+    },
+    {
+        "question" : "Quelles sont les conséquences possibles du harcèlement sexuel au travail, à la fois pour les victimes et pour les organisations ?",
+        "choice1" : "Augmentation de la productivité et amélioration de l'environnement de travail.",
+        "choice2" : "Épuisement professionnel, anxiété, dépression pour la victime et risque de poursuites judiciaires pour l'organisation.",
+        "choice3" : "Aucune conséquence significative pour la victime ou l'organisation.",
+        "choice4" : "Augmentation des opportunités de promotion.",
+        "answer" : 2,
+        "explication" : "La réponse 2 est correcte car elle décrit les conséquences négatives pour les victimes et les organisations."
+    },
+    {
+        "question" : "Pouvez-vous identifier les étapes à suivre si vous êtes témoin ou victime de harcèlement sexuel au travail ?",
+        "choice1" : "Ignorer la situation.",
+        "choice2" : "Documenter les incidents, en parler à un supérieur ou au service des ressources humaines, et envisager une action en justice.",
+        "choice3" : "Se venger contre l'agresseur.",
+        "choice4" : "Discuter de la situation avec des collègues non impliqués.",
+        "answer" : 2,
+        "explication" : "La réponse 2 est correcte car elle décrit les étapes appropriées à suivre en cases appropriées à suivre en cas de harcèlement sexuel au travail."
+    },
+    {
+        "question" : "Connaissez-vous les différences entre le harcèlement sexuel et d'autres comportements inappropriés au travail, tels que la discrimination ou le harcèlement moral ?",
+        "choice1" : "Il n'y a pas de différences significatives.",
+        "choice2" : "Le harcèlement sexuel est spécifiquement de nature sexuelle, tandis que la discrimination et le harcèlement moral peuvent être basés sur d'autres facteurs comme l'âge, la race, etc.",
+        "choice3" : "Le harcèlement sexuel est légal tandis que la discrimination ne l'est pas.",
+        "choice4" : "Le harcèlement sexuel est une forme de discrimination.",
+        "answer" : 2,
+        "explication" : "La réponse 2 est correcte car elle explique la différence entre le harcèlement sexuel et d'autres comportements inappropriés au travail."
+    },
+    {
+        "question" : "Quels sont les signes indiquant que quelqu'un peut être victime de harcèlement sexuel au travail ?",
+        "choice1" : "Changements d'humeur, évitement de certaines personnes ou lieux, baisse de productivité.",
+        "choice2" : "L'individu reçoit beaucoup de compliments.",
+        "choice3" : "La personne est toujours heureuse et énergique.",
+        "choice4" : "La personne est souvent en retard au travail.",
+        "answer" : 1,
+        "explication" : "La réponse 1 est correcte car elle décrit les signes courants indiquant que quelqu'un peut être victime de harcèlement sexuel au travail."
+    },
+    {
+        "question" : "Le harcèlement sexuel peut-il toucher les hommes ?",
+        "choice1" : "Non, seulement les femmes peuvent être victimes de harcèlement sexuel.",
+        "choice2" : "Oui, le harcèlement sexuel peut toucher tout individu, quel que soit son sexe.",
+        "choice3" : "Cela dépend des lois locales.",
+        "choice4" : "Seulement si l'homme est dans une position de pouvoir.",
+        "answer" : 2,
+        "explication" : "La réponse 2 est correcte car le harcèlement sexuel peut affecter tout individu, indépendamment de son sexe."
+    },
+    {
+        "question" : "Est-ce que les lois sur le harcèlement sexuel sont les mêmes dans tous les pays ?",
+        "choice1" : "Oui, les lois sont universelles.",
+        "choice2" : "Non, les lois peuvent varier considérablement d'un pays à l'autre.",
+        "choice3" : "Cela dépend de la religion dominante du pays.",
+        "choice4" : "Seulement dans les pays occidentaux.",
+        "answer" : 2,
+        "explication" : "La réponse 2 est correcte car les lois sur le harcèlement sexuel peuvent différer d'un pays à l'autre."
+    },
+    {
+        "question" : "Comment peut-on prévenir le harcèlement sexuel au travail ?",
+        "choice1" : "En évitant tout contact avec les collègues.",
+        "choice2" : "En formant régulièrement les employés et en instaurant une politique de tolérance zéro.",
+        "choice3" : "En blâmant les victimes pour leur comportement.",
+        "choice4" : "En évitant les discussions personnelles au travail.",
+        "answer" : 2,
+        "explication" : "La réponse 2 est correcte car elle décrit des mesures préventives efficaces telles que la formation des employés et une politique de tolérance zéro."
+    },
+    {
+        "question" : "Quel est le rôle des ressources humaines dans la gestion du harcèlement sexuel au travail ?",
+        "choice1" : "Ignorer les plaintes pour éviter des problèmes juridiques.",
+        "choice2" : "Écouter les victimes, enquêter sur les allégations et prendre des mesures appropriées.",
+        "choice3" : "Se concentrer uniquement sur le bien-être de la direction.",
+        "choice4" : "Organiser des événements sociaux pour améliorer le moral de l'équipe.",
+        "answer" : 2,
+        "explication" : "La réponse 2 est correcte car elle décrit le rôle  des ressources humaines dans la gestion du harcèlement sexuel au travail, qui consiste à écouter les victimes, enquêter sur les allégations et prendre des mesures appropriées pour résoudre le problème."
+    },
+    {
+        "question" : "Pouvez-vous définir ce qu'est le harcèlement sexuel au travail selon votre compréhension personnelle ?",
         "choice1" : "Le harcèlement sexuel au travail est simplement une forme de flirt inoffensive entre collègues.",
         "choice2" : "Le harcèlement sexuel au travail ne concerne que les commentaires ou les avances physiques explicites.",
         "choice3" : "Le harcèlement sexuel au travail n'est un problème que si la victime en parle à sa hiérarchie.",
         "choice4" : "Le harcèlement sexuel au travail est une forme de comportement inapproprié et non désiré à caractère sexuel qui crée un environnement de travail hostile, intimidant ou offensant pour la victime. ",
-        "answer" : 4
-
+        "answer" : 4,
+        "explication" : "La réponse 4 est correcte car elle fournit une définition précise et complète du harcèlement sexuel au travail, mettant en lumière le caractère inapproprié et non désiré de ces comportements, ainsi que l'impact négatif qu'ils peuvent avoir sur l'environnement de travail."
     },
     {
         "question" : "Connaissez-vous les différentes formes de harcèlement sexuel au travail ? Pouvez-vous en donner des exemples ?",
@@ -14,7 +104,8 @@
         "choice2" : "Le harcèlement sexuel au travail se limite uniquement aux commentaires inoffensifs sur l'apparence physique des collègues.",
         "choice3" : "Le harcèlement sexuel au travail peut prendre de nombreuses formes, notamment les commentaires déplacés, les avances non désirées, les blagues offensantes.",
         "choice4" : "Le harcèlement sexuel au travail n'existe que lorsque les collègues sont de sexes opposés.",
-        "answer" : 3
+        "answer" : 3,
+        "explication" : "La réponse 3 est correcte car elle reconnaît que le harcèlement sexuel au travail peut se manifester de différentes manières, y compris à travers des commentaires déplacés, des avances non désirées et des blagues offensantes, ce qui montre la diversité des comportements qui peuvent constituer du harcèlement sexuel."
     },
     {
         "question" : "Êtes-vous conscient(e) des lois et réglementations en vigueur dans votre pays ou région concernant le harcèlement sexuel au travail ?",
@@ -22,6 +113,70 @@
         "choice2" : "Le harcèlement sexuel au travail se limite uniquement aux commentaires inoffensifs sur l'apparence physique des collègues.",
         "choice3" : "Le harcèlement sexuel au travail peut prendre de nombreuses formes, notamment les commentaires déplacés, les avances non désirées, les blagues offensantes.",
         "choice4" : "Le harcèlement sexuel au travail n'existe que lorsque les collègues sont de sexes opposés.",
-        "answer" : 3
+        "answer" : 3,
+        "explication" : "La réponse 3 est incorrecte. Il est essentiel de connaître et de comprendre les lois et les réglementations relatives au harcèlement sexuel au travail dans votre pays ou région afin de garantir un environnement de travail sûr et respectueux pour tous."
+    },
+    {
+        "question" : "Quelle est l'importance de la formation sur le harcèlement sexuel dans les organisations ?",
+        "choice1" : "Aucune importance.",
+        "choice2" : "Elle aide à sensibiliser et à prévenir le harcèlement sexuel.",
+        "choice3" : "Elle encourage le harcèlement sexuel.",
+        "choice4" : "Elle réduit la productivité.",
+        "answer" : 2,
+        "explication" : "La réponse 2 est correcte car elle souligne l'importance de la sensibilisation et de la prévention du harcèlement sexuel à travers la formation dans les organisations."
+    },
+    {
+        "question" : "Est-ce que les témoins de harcèlement sexuel peuvent également être affectés ?",
+        "choice1" : "Non, cela ne concerne que les victimes directes.",
+        "choice2" : "Oui, les témoins peuvent également être affectés émotionnellement.",
+        "choice3" : "Seulement s'ils sont amis avec la victime.",
+        "choice4" : "Seulement s'ils en parlent.",
+        "answer" : 2,
+        "explication" : "La réponse 2 est correcte car elle reconnaît que les témoins peuvent également être affectés émotionnellement par le harcèlement sexuel au travail, même s'ils ne sont pas les victimes directes."
+    },
+    {
+        "question" : "Est-il possible d'avoir du harcèlement sexuel dans un environnement de travail virtuel ?",
+        "choice1" : "Non, cela ne se produit que face à face.",
+        "choice2" : "Oui, cela peut se produire par le biais de communications en ligne inappropriées.",
+        "choice3" : "Seulement si les collègues se connaissent personnellement.",
+        "choice4" : "Seulement dans les grandes entreprises.",
+        "answer" : 2,
+        "explication" : "La réponse 2 est correcte car elle indique que le harcèlement sexuel peut également se produire dans un environnement virtuel, notamment par le biais de communications en ligne inappropriées."
+    },
+    {
+        "question" : "Quel est le rôle des managers dans la prévention du harcèlement sexuel ?",
+        "choice1" : "Ignorer tout signalement de harcèlement.",
+        "choice2" : "Favoriser une culture de respect et réagir promptement aux allégations.",
+        "choice3" : "Se concentrer uniquement sur la réalisation des objectifs de l'entreprise.",
+        "choice4" : "Blâmer les victimes.",
+        "answer" : 2,
+        "explication" : "La réponse 2 est correcte car elle souligne le rôle crucial des managers dans la promotion d'une culture de respect et la réaction rapide aux allégations de harcèlement sexuel."
+    },
+    {
+        "question" : "Quel est l'impact du harcèlement sexuel sur la réputation d'une entreprise ?",
+        "choice1" : "Il n'y a aucun impact.",
+        "choice2" : "Il peut nuire considérablement à la réputation et à la confiance du public envers l'entreprise.",
+        "choice3" : "Il augmente la notoriété de l'entreprise.",
+        "choice4" : "Il attire plus de clients.",
+        "answer" : 2,
+        "explication" : "La réponse 2 est correcte car elle met en évidence les répercussions négatives potentielles du harcèlement sexuel sur la réputation et la confiance du public envers une entreprise."
+    },
+    {
+        "question" : "Quelles peuvent être les répercussions légales du harcèlement sexuel au travail pour un employeur ?",
+        "choice1" : "Aucune répercussion.",
+        "choice2" : "Des amendes, des indemnités à payer aux victimes et une possible réputation juridique négative.",
+        "choice3" : "Une augmentation des ventes.",
+        "choice4" : "Une meilleure relation avec les clients.",
+        "answer" : 2,
+        "explication" : "La réponse 2 est correcte car elle met en lumière les conséquences juridiques possibles pour un employeur en cas de harcèlement sexuel au travail, y compris les amendes et les indemnités."
+    },
+    {
+        "question" : "Comment les collègues peuvent-ils soutenir une personne victime de harcèlement sexuel au travail ?",
+        "choice1" : "En partageant les rumeurs.",
+        "choice2" : "En offrant un soutien émotionnel et en encourageant la victime à signaler le harcèlement.",
+        "choice3" : "En ignorant la situation.",
+        "choice4" : "En confrontant l'agresseur sans le consentement de la victime.",
+        "answer" : 2,
+        "explication" : "La réponse 2 est correcte car elle encourage un soutien positif et constructif envers la victime, tout en respectant son autonomie dans la gestion de la situation."
     }
 ]
