@@ -64,6 +64,10 @@ getNewQuestion = () => {
         choice.parentElement.classList.remove('correct');
     });
 
+    choices.forEach((choice) => {
+        choice.parentElement.classList.remove('incorrect');
+    });
+
     availableQuesions.splice(questionIndex, 1);
     acceptingAnswers = true;
 };
@@ -91,17 +95,9 @@ choices.forEach((choice) => {
 
         selectedChoice.parentElement.classList.add(classToApply);
         showExplanation(currentQuestion.explanation);
-        setTimeout(() => {
-            selectedChoice.parentElement.classList.remove(classToApply);
-        }, 3000);
     });
 });
 
-span.onclick = function() {
-    modal.style.display = "none";
-    getNewQuestion();
-  }
-  
   // When the user clicks anywhere outside of the modal, close it
   window.onclick = function(event) {
     if (event.target == modal) {
