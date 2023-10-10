@@ -93,19 +93,20 @@ choices.forEach((choice) => {
         showExplanation(currentQuestion.explanation);
         setTimeout(() => {
             selectedChoice.parentElement.classList.remove(classToApply);
-            getNewQuestion();
         }, 3000);
     });
 });
 
 span.onclick = function() {
     modal.style.display = "none";
+    getNewQuestion();
   }
   
   // When the user clicks anywhere outside of the modal, close it
   window.onclick = function(event) {
     if (event.target == modal) {
       modal.style.display = "none";
+      getNewQuestion();
     }
   }
   
