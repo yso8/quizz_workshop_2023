@@ -41,7 +41,7 @@ getNewQuestion = () => {
     if (availableQuesions.length === 0 || questionCounter >= MAX_QUESTIONS) {
         localStorage.setItem('mostRecentScore', score);
         //go to the end page
-        return window.location.assign('./end.html');
+        //return window.location.assign('./end.html');
     }
     questionCounter++;
     progressText.innerText = `Question ${questionCounter}/${MAX_QUESTIONS}`;
@@ -75,6 +75,12 @@ choices.forEach((choice) => {
         if (classToApply === 'correct') {
             incrementScore(CORRECT_BONUS);
         }
+
+        choices.forEach((choice) => {
+            if (choice.dataset['number'] == currentQuestion.answer) {
+                choice.parentElement.classList.add('correct');
+            }
+        });
 
         selectedChoice.parentElement.classList.add(classToApply);
 
