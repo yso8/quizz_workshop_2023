@@ -5,6 +5,9 @@ const scoreText = document.getElementById('score');
 const progressBarFull = document.getElementById('progressBarFull');
 const loader = document.getElementById('loader');
 const game = document.getElementById('game');
+const modal = document.getElementById("myModal");
+const span = document.getElementsByClassName("close")[0];
+const explanationText = document.getElementById("explanation");
 let currentQuestion = {};
 let acceptingAnswers = false;
 let score = 0;
@@ -87,13 +90,30 @@ choices.forEach((choice) => {
         });
 
         selectedChoice.parentElement.classList.add(classToApply);
-
+        showExplanation(currentQuestion.explanation);
         setTimeout(() => {
             selectedChoice.parentElement.classList.remove(classToApply);
             getNewQuestion();
         }, 3000);
     });
 });
+
+span.onclick = function() {
+    modal.style.display = "none";
+  }
+  
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+  
+  // Show the modal with the explanation
+  function showExplanation(explanation) {
+    explanationText.innerText = explanation;
+    modal.style.display = "block";
+  }
 
 incrementScore = (num) => {
     score += num;
