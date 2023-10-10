@@ -13,8 +13,7 @@ let availableQuesions = [];
 
 let questions = [];
 
-// Charger les questions à partir du fichier JSON
-fetch('questions.json')
+fetch('assets/data/questions.json')
   .then((res) => res.json())
   .then((loadedQuestions) => {
     questions = loadedQuestions;
