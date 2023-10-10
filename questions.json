@@ -1,0 +1,27 @@
+[
+    {
+        "question" : "Pouvez-vous définir ce qu'est le harcèlement sexuel au travail selon votre compréhension personnelle ?",
+        "choice1" : "Le harcèlement sexuel au travail est simplement une forme de flirt inoffensive entre collègues.",
+        "choice2" : "Le harcèlement sexuel au travail ne concerne que les commentaires ou les avances physiques explicites.",
+        "choice3" : "Le harcèlement sexuel au travail n'est un problème que si la victime en parle à sa hiérarchie.",
+        "choice4" : "Le harcèlement sexuel au travail est une forme de comportement inapproprié et non désiré à caractère sexuel qui crée un environnement de travail hostile, intimidant ou offensant pour la victime. ",
+        "answer" : 4
+
+    },
+    {
+        "question" : "Connaissez-vous les différentes formes de harcèlement sexuel au travail ? Pouvez-vous en donner des exemples ?",
+        "choice1" : "Le harcèlement sexuel au travail se produit principalement lors des fêtes de bureau et des événements sociaux de l'entreprise.",
+        "choice2" : "Le harcèlement sexuel au travail se limite uniquement aux commentaires inoffensifs sur l'apparence physique des collègues.",
+        "choice3" : "Le harcèlement sexuel au travail peut prendre de nombreuses formes, notamment les commentaires déplacés, les avances non désirées, les blagues offensantes.",
+        "choice4" : "Le harcèlement sexuel au travail n'existe que lorsque les collègues sont de sexes opposés.",
+        "answer" : 3
+    },
+    {
+        "question" : "Êtes-vous conscient(e) des lois et réglementations en vigueur dans votre pays ou région concernant le harcèlement sexuel au travail ?",
+        "choice1" : "Le harcèlement sexuel au travail se produit principalement lors des fêtes de bureau et des événements sociaux de l'entreprise.",
+        "choice2" : "Le harcèlement sexuel au travail se limite uniquement aux commentaires inoffensifs sur l'apparence physique des collègues.",
+        "choice3" : "Le harcèlement sexuel au travail peut prendre de nombreuses formes, notamment les commentaires déplacés, les avances non désirées, les blagues offensantes.",
+        "choice4" : "Le harcèlement sexuel au travail n'existe que lorsque les collègues sont de sexes opposés.",
+        "answer" : 3
+    }
+]
