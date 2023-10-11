@@ -8,6 +8,9 @@ const game = document.getElementById('game');
 const modal = document.getElementById("myModal");
 const span = document.getElementsByClassName("close")[0];
 const explanationText = document.getElementById("explanation");
+const PourcentageText = document.getElementById("pourcentage");
+
+let currentPourcentage = {};
 let currentQuestion = {};
 let acceptingAnswers = false;
 let score = 0;
@@ -95,6 +98,10 @@ choices.forEach((choice) => {
 
         selectedChoice.parentElement.classList.add(classToApply);
         showExplanation(currentQuestion.explanation);
+
+        selectedChoice.parentElement.classList.add(classToApply);
+        showPourcentage(currentPourcentage.pourcentage);
+
     });
 });
 
@@ -107,10 +114,21 @@ choices.forEach((choice) => {
   }
   
   // Show the modal with the explanation
-  function showExplanation(explanation) {
+function getRandomPercentage() {
+    return Math.floor(Math.random() * 100) + 1;
+}
+// Show the modal with the explanation
+function showExplanation(explanation) {
     explanationText.innerText = explanation;
+
+    // Générer un pourcentage aléatoire
+    const randomPercentage = getRandomPercentage();
+
+    // Afficher ce pourcentage
+    PourcentageText.innerText = `${randomPercentage}% des personnes dans votre entreprise ont donné la même réponse que vous.`;
+
     modal.style.display = "block";
-  }
+}
 
 incrementScore = (num) => {
     score += num;

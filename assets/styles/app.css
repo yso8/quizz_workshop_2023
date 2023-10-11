@@ -1,5 +1,5 @@
 :root {
-  background-color: #f2faff;
+  background-color: #eee;
   font-size: 62.5%;
 }
 
@@ -45,6 +45,16 @@ h3 {
 .container {
   width: 100vw;
   height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.homebutton {
+  width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -100,6 +110,32 @@ h3 {
 }
 
 .btn[disabled]:hover {
+  cursor: not-allowed;
+  box-shadow: none;
+  transform: none;
+}
+
+/* BUTTONS */
+.btnStop {
+  font-size: 1.8rem;
+  padding: 1rem 0;
+  width: 20rem;
+  text-align: center;
+  border: 0.1rem solid #ff0000;
+  margin-bottom: 1rem;
+  text-decoration: none;
+  color: #ff0000;
+  background-color: white;
+}
+
+.btnStop:hover {
+  cursor: pointer;
+  box-shadow: 0 0.4rem 1.4rem 0 #ff0000;
+  transform: translateY(-0.1rem);
+  transition: transform 150ms;
+}
+
+.btnStop[disabled]:hover {
   cursor: not-allowed;
   box-shadow: none;
   transform: none;

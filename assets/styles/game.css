@@ -1,3 +1,7 @@
+:root {
+  background-color: #eee;
+}
+
 .choice-container {
   display: flex;
   margin-bottom: 0.5rem;
@@ -115,4 +119,9 @@
   color: #000;
   text-decoration: none;
   cursor: pointer;
+}
+
+#pourcentage{
+  color: #F4AA41;
+  font-size: 12px;
 }

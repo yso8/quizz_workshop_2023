@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Quizzify - Play</title>
+    <title>SafeWork - Play</title>
     <link rel="stylesheet" href="assets/styles/app.css" />
     <link rel="stylesheet" href="assets/styles/game.css" />
     <link rel="icon" type="image/jpg" href="assets/play.jpg">
@@ -50,14 +50,20 @@
           <p class="choice-prefix">D</p>
           <p class="choice-text" data-number="4"></p>
         </div>
+        <div class="homebutton">
+          <a class="btnStop" href="index.html">Quittez le jeu</a>
+        </div>
         <div id="myModal" class="modal">
           <div style="max-width: 720px;" class="modal-content">
             <span style="visibility : hidden;" class="close">&times;</span>
             <h3 id="explanation" class="invisible"></h3>
+            <h3 id="pourcentage"></h3>
           </div>
+
         </div>
       </div>
     </div>
     <script src="assets/js/game.js"></script>
+
   </body>
 </html>

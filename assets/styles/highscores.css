@@ -1,3 +1,7 @@
+:root {
+  background-color: #eee;
+}
+
 #highScoresList {
   list-style: none;
   padding-left: 0;
