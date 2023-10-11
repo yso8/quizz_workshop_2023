@@ -122,7 +122,7 @@ function getNewPuzzle() {
       //go to the end page
       return window.location.assign('./end.html');
     }
-    
+
     let images = ['image1.png', 'image2.png', 'image3.png', 'image4.png', 'image5.png', 'image6.png', 'image7.png', 'image8.png', 'image9.png', 'image10.png', 'image11.png', 'image12.png', 'image13.png', 'image14.png', 'image15.png'];
     let randomImage = images[Math.floor(Math.random() * images.length)];
     let imagePath = 'assets/image/' + randomImage;
@@ -148,7 +148,7 @@ function getNewPuzzle() {
       puzzle.classList.remove('hidden');
       question.innerText = 'Résoudre le puzzle ci-dessous : ';
           
-      //keyboard.shuffle(0.7);
+      keyboard.shuffle(0.7);
       keyboard.registerKeyboardGestures();
       keyboard.draw();
       keyboard.attachSolvedValidator();
