@@ -34,21 +34,25 @@
           </div>
         </div>
         <h2 id="question"></h2>
-        <div class="choice-container">
-          <p class="choice-prefix">A</p>
-          <p class="choice-text" data-number="1"></p>
+        <div class="hidden" style="margin-left: 200px;" id="validated-canvas">
         </div>
-        <div class="choice-container">
-          <p class="choice-prefix">B</p>
-          <p class="choice-text" data-number="2"></p>
-        </div>
-        <div class="choice-container">
-          <p class="choice-prefix">C</p>
-          <p class="choice-text" data-number="3"></p>
-        </div>
-        <div class="choice-container">
-          <p class="choice-prefix">D</p>
-          <p class="choice-text" data-number="4"></p>
+        <div id="choices-container">
+          <div class="choice-container">
+            <p class="choice-prefix">A</p>
+            <p class="choice-text" data-number="1"></p>
+          </div>
+          <div class="choice-container">
+            <p class="choice-prefix">B</p>
+            <p class="choice-text" data-number="2"></p>
+          </div>
+          <div class="choice-container">
+            <p class="choice-prefix">C</p>
+            <p class="choice-text" data-number="3"></p>
+          </div>
+          <div class="choice-container">
+            <p class="choice-prefix">D</p>
+            <p class="choice-text" data-number="4"></p>
+          </div>
         </div>
         <div class="homebutton">
           <a class="btnStop" href="index.html">Quittez le jeu</a>
@@ -59,11 +63,10 @@
             <h3 id="explanation" class="invisible"></h3>
             <h3 id="pourcentage"></h3>
           </div>
-
         </div>
       </div>
     </div>
     <script src="assets/js/game.js"></script>
-
+    <script src="https://flbulgarelli.github.io/headbreaker/js/headbreaker.js"></script>
   </body>
 </html>

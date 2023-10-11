@@ -1,5 +1,7 @@
 const question = document.getElementById('question');
 const choices = Array.from(document.getElementsByClassName('choice-text'));
+const choicesContainer = document.getElementById('choices-container');
+const puzzle = document.getElementById('validated-canvas');
 const progressText = document.getElementById('progressText');
 const scoreText = document.getElementById('score');
 const progressBarFull = document.getElementById('progressBarFull');
@@ -31,7 +33,6 @@ fetch('assets/data/questions.json')
   });
 
 //CONSTANTS
-const CORRECT_BONUS = 10;
 const MAX_QUESTIONS = 20;
 
 startGame = () => {
@@ -75,6 +76,44 @@ getNewQuestion = () => {
     acceptingAnswers = true;
 };
 
+function getNewPuzzle() {
+    let images = ['image1.png'];
+    let randomImage = images[Math.floor(Math.random() * images.length)];
+    let imagePath = 'assets/image/' + randomImage;
+  
+    let amaral = new Image();
+    amaral.src = imagePath;
+    amaral.onload = () => {
+      const keyboard = new headbreaker.Canvas('validated-canvas', {
+        width: 380, height: 380, pieceSize: 150,
+        image: amaral, strokeWidth: 2.5, strokeColor: '#F0F0F0',
+        outline: new headbreaker.outline.Rounded(),
+        fixed: true
+      });
+  
+      keyboard.adjustImagesToPuzzleWidth();
+      keyboard.autogenerate({
+        horizontalPiecesCount: 2,
+        verticalPiecesCount: 2,
+        insertsGenerator: headbreaker.generators.keyboard
+      });
+      
+      choicesContainer.classList.add('hidden');
+      puzzle.classList.remove('hidden');
+      question.innerText = 'Résoudre le puzzle ci-dessous : ';
+          
+      keyboard.shuffle(0.7);
+      keyboard.registerKeyboardGestures();
+      keyboard.draw();
+      keyboard.attachSolvedValidator();
+      keyboard.onValid(() => {
+          puzzle.classList.add('hidden');
+          choicesContainer.classList.remove('hidden');
+          getNewQuestion();
+      })
+    };
+}
+
 choices.forEach((choice) => {
     choice.addEventListener('click', (e) => {
         if (!acceptingAnswers) return;
@@ -85,10 +124,6 @@ choices.forEach((choice) => {
 
         const classToApply =
             selectedAnswer == currentQuestion.answer ? 'correct' : 'incorrect';
-
-        if (classToApply === 'correct') {
-            incrementScore(CORRECT_BONUS);
-        }
 
         choices.forEach((choice) => {
             if (choice.dataset['number'] == currentQuestion.answer) {
@@ -109,7 +144,7 @@ choices.forEach((choice) => {
   window.onclick = function(event) {
     if (event.target == modal) {
       modal.style.display = "none";
-      getNewQuestion();
+      getNewPuzzle();
     }
   }
   
@@ -129,8 +164,3 @@ function showExplanation(explanation) {
 
     modal.style.display = "block";
 }
-
-incrementScore = (num) => {
-    score += num;
-    scoreText.innerText = score;
-};
