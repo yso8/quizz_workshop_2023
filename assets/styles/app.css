@@ -89,7 +89,7 @@ h3 {
   display: none;
 }
 
-/* BUTTONS */
+/* BOUTONS */
 .btn {
   font-size: 1.8rem;
   padding: 1rem 0;
@@ -109,7 +109,13 @@ h3 {
   transition: transform 150ms;
 }
 
-.btn[disabled]:hover {
+.disabled {
+  cursor: not-allowed;
+  color: #ccc;
+  border: 0.1rem solid #ccc;
+}
+
+.disabled:hover {
   cursor: not-allowed;
   box-shadow: none;
   transform: none;
