@@ -10,7 +10,12 @@ const modal = document.getElementById("myModal");
 const span = document.getElementsByClassName("close")[0];
 const explanationText = document.getElementById("explanation");
 const PourcentageText = document.getElementById("pourcentage");
+const scoreDisplay = document.getElementById('score');
+
+//CONSTANTS
+const CORRECT_BONUS = 10;
 const MAX_QUESTIONS = 20;
+const PUZZLE_TERMINATED = 5;
 
 let currentPourcentage = {};
 let currentQuestion = {};
@@ -43,13 +48,13 @@ startGame = () => {
 
 getNewQuestion = () => {
     if (availableQuesions.length === 0 || questionCounter >= MAX_QUESTIONS) {
-        localStorage.setItem('mostRecentScore', score);
+        localStorage.setItem('mostRecentScore', scoreDisplay.textContent);
         //go to the end page
         return window.location.assign('./end.html');
     }
     questionCounter++;
     progressText.innerText = `Question ${questionCounter}/${MAX_QUESTIONS}`;
-    //Update the progress bar
+    //update the progress bar
     progressBarFull.style.width = `${(questionCounter / MAX_QUESTIONS) * 100}%`;
 
     const questionIndex = Math.floor(Math.random() * availableQuesions.length);
@@ -73,8 +78,52 @@ getNewQuestion = () => {
     acceptingAnswers = true;
 };
 
+choices.forEach((choice) => {
+    choice.addEventListener('click', (e) => {
+        if (!acceptingAnswers) return;
+
+        acceptingAnswers = false;
+        const selectedChoice = e.target;
+        const selectedAnswer = selectedChoice.dataset['number'];
+
+        const classToApply =
+            selectedAnswer == currentQuestion.answer ? 'correct' : 'incorrect';
+
+        if (classToApply === 'correct') {
+          incrementScore(CORRECT_BONUS);
+        }  
+
+        choices.forEach((choice) => {
+            if (choice.dataset['number'] == currentQuestion.answer) {
+                choice.parentElement.classList.add('correct');
+            }
+        });
+
+        selectedChoice.parentElement.classList.add(classToApply);
+        showExplanation(currentQuestion.explanation);
+    });
+});
+
+incrementScore = (num) => {
+  score += num;
+};
+
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+      getNewPuzzle();
+    }
+  }
+
 function getNewPuzzle() {
-    let images = ['image1.png'];
+    if (availableQuesions.length === 0 || questionCounter >= MAX_QUESTIONS) {
+      localStorage.setItem('mostRecentScore', scoreDisplay.textContent);
+      //go to the end page
+      return window.location.assign('./end.html');
+    }
+    
+    let images = ['image1.png', 'image2.png', 'image3.png', 'image4.png', 'image5.png', 'image6.png', 'image7.png', 'image8.png', 'image9.png', 'image10.png', 'image11.png', 'image12.png', 'image13.png', 'image14.png', 'image15.png'];
     let randomImage = images[Math.floor(Math.random() * images.length)];
     let imagePath = 'assets/image/' + randomImage;
   
@@ -99,51 +148,21 @@ function getNewPuzzle() {
       puzzle.classList.remove('hidden');
       question.innerText = 'Résoudre le puzzle ci-dessous : ';
           
-      keyboard.shuffle(0.7);
+      //keyboard.shuffle(0.7);
       keyboard.registerKeyboardGestures();
       keyboard.draw();
       keyboard.attachSolvedValidator();
       keyboard.onValid(() => {
-          puzzle.classList.add('hidden');
-          choicesContainer.classList.remove('hidden');
-          getNewQuestion();
+          setTimeout(() => {
+              incrementScore(PUZZLE_TERMINATED);
+              puzzle.classList.add('hidden');
+              choicesContainer.classList.remove('hidden');
+              getNewQuestion();
+          }, 500);
       })
     };
 }
 
-choices.forEach((choice) => {
-    choice.addEventListener('click', (e) => {
-        if (!acceptingAnswers) return;
-
-        acceptingAnswers = false;
-        const selectedChoice = e.target;
-        const selectedAnswer = selectedChoice.dataset['number'];
-
-        const classToApply =
-            selectedAnswer == currentQuestion.answer ? 'correct' : 'incorrect';
-
-        choices.forEach((choice) => {
-            if (choice.dataset['number'] == currentQuestion.answer) {
-                choice.parentElement.classList.add('correct');
-            }
-        });
-
-        selectedChoice.parentElement.classList.add(classToApply);
-        showExplanation(currentQuestion.explanation);
-
-        selectedChoice.parentElement.classList.add(classToApply);
-        showPourcentage(currentPourcentage.pourcentage);
-
-    });
-});
-
-  // When the user clicks anywhere outside of the modal, close it
-  window.onclick = function(event) {
-    if (event.target == modal) {
-      modal.style.display = "none";
-      getNewPuzzle();
-    }
-  }
   
   // Show the modal with the explanation
 function getRandomPercentage() {
@@ -164,7 +183,6 @@ function showExplanation(explanation) {
 }
 
 function startTimer() {
-    let timerDisplay = document.getElementById('score'); // Remplacez par l'ID de votre élément d'affichage du timer
     let seconds = 0;
     let minutes = 0;
   
@@ -178,8 +196,8 @@ function startTimer() {
       const displayMinutes = minutes < 10 ? "0" + minutes : minutes;
       const displaySeconds = seconds < 10 ? "0" + seconds : seconds;
   
-      timerDisplay.textContent = displayMinutes + ":" + displaySeconds;
+      scoreDisplay.textContent = score + " - " + displayMinutes + ":" + displaySeconds;
     }
   
     const timerInterval = setInterval(updateTimerDisplay, 1000);
-  }
+}
