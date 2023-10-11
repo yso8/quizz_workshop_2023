@@ -14,11 +14,22 @@
   <body>
     <div class="container">
       <div id="highScores" class="flex-center flex-column">
+        <div>
+          <lottie-player
+            autoplay
+            loop
+            mode="normal"
+            src="assets/lottiefiles/trophy.json"
+            style="width: 320px"
+          >
+          </lottie-player>
+        </div>
         <h1 id="finalScore">Meilleurs résultats</h1>
         <ul id="highScoresList"></ul>
         <a class="btn" href="index.html">Accueil</a>
       </div>
     </div>
     <script src="assets/js/highscores.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@1.5.7/dist/lottie-player.js"></script>
   </body>
 </html>
