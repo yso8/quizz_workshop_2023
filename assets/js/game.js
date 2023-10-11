@@ -3,7 +3,6 @@ const choices = Array.from(document.getElementsByClassName('choice-text'));
 const choicesContainer = document.getElementById('choices-container');
 const puzzle = document.getElementById('validated-canvas');
 const progressText = document.getElementById('progressText');
-const scoreText = document.getElementById('score');
 const progressBarFull = document.getElementById('progressBarFull');
 const loader = document.getElementById('loader');
 const game = document.getElementById('game');
@@ -11,6 +10,7 @@ const modal = document.getElementById("myModal");
 const span = document.getElementsByClassName("close")[0];
 const explanationText = document.getElementById("explanation");
 const PourcentageText = document.getElementById("pourcentage");
+const MAX_QUESTIONS = 20;
 
 let currentPourcentage = {};
 let currentQuestion = {};
@@ -18,7 +18,6 @@ let acceptingAnswers = false;
 let score = 0;
 let questionCounter = 0;
 let availableQuesions = [];
-
 let questions = [];
 
 fetch('assets/data/questions.json')
@@ -32,13 +31,11 @@ fetch('assets/data/questions.json')
     console.error(err);
   });
 
-//CONSTANTS
-const MAX_QUESTIONS = 20;
-
 startGame = () => {
     questionCounter = 0;
     score = 0;
     availableQuesions = [...questions];
+    startTimer();
     getNewQuestion();
     game.classList.remove('hidden');
     loader.classList.add('hidden');
@@ -152,6 +149,7 @@ choices.forEach((choice) => {
 function getRandomPercentage() {
     return Math.floor(Math.random() * 100) + 1;
 }
+
 // Show the modal with the explanation
 function showExplanation(explanation) {
     explanationText.innerText = explanation;
@@ -164,3 +162,24 @@ function showExplanation(explanation) {
 
     modal.style.display = "block";
 }
+
+function startTimer() {
+    let timerDisplay = document.getElementById('score'); // Remplacez par l'ID de votre élément d'affichage du timer
+    let seconds = 0;
+    let minutes = 0;
+  
+    function updateTimerDisplay() {
+      seconds++;
+      if (seconds >= 60) {
+        seconds = 0;
+        minutes++;
+      }
+  
+      const displayMinutes = minutes < 10 ? "0" + minutes : minutes;
+      const displaySeconds = seconds < 10 ? "0" + seconds : seconds;
+  
+      timerDisplay.textContent = displayMinutes + ":" + displaySeconds;
+    }
+  
+    const timerInterval = setInterval(updateTimerDisplay, 1000);
+  }
