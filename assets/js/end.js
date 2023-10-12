@@ -7,13 +7,13 @@ const highScores = JSON.parse(localStorage.getItem('highScores')) || [];
 const MAX_HIGH_SCORES = 5;
 
 let emoji = '';
-if (mostRecentScore >= 0 && mostRecentScore < 50) {
+if (mostRecentScore.toString().substring(0, 3) >= 0 && mostRecentScore.toString().substring(0, 3) < 75) {
     emoji = 'assets/emoji/1F640.svg';
-} else if (mostRecentScore >= 50 && mostRecentScore < 100) {
+} else if (mostRecentScore.toString().substring(0, 3) >= 75 && mostRecentScore.toString().substring(0, 3) < 150) {
     emoji = 'assets/emoji/1F63F.svg';
-} else if (mostRecentScore >= 100 && mostRecentScore < 150) {
+} else if (mostRecentScore.toString().substring(0, 3) >= 150 && mostRecentScore.toString().substring(0, 3) < 225) {
     emoji = 'assets/emoji/1F63A.svg';
-} else if (mostRecentScore >= 150 && mostRecentScore <= 200) {
+} else if (mostRecentScore.toString().substring(0, 3) >= 225 && mostRecentScore.toString().substring(0, 3) <= 300) {
     emoji = 'assets/emoji/1F638.svg';
 }
 emojiScore.src = emoji;
